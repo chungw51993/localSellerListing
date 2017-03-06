@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/chungw51993/hratx25-mvp#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "mongoose": "^4.8.6",
+    "node-craigslist": "^1.1.0",
+    "q": "^1.4.1"
   }
 }

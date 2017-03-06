@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='localList'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Local Seller Listing</title>
+  </head>
+  <body>
+    <h1>Local Seller Listing</h1>
+
+    <nav class="navigation">
+    <ul>
+      <li><a href="#/lists">List</a></li>
+    </ul>
+    </nav>
+
+    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <div ng-view></div>
+
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+
+    <script src="app/lists/lists.js"></script>
+    <script src="app/services/services.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>

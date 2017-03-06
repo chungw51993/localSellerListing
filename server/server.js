@@ -1,10 +1,13 @@
 var express = require('express');
+
 var app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
+require('./config/routes.js')(app, express);
+app.use(express.static(__dirname + '/../client'));
+
 
 app.listen(8000, () => {
   console.log('Server is listening on port 8000!');
-})
+});
+
+module.exports = app;
