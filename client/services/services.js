@@ -6,6 +6,7 @@ angular.module('localList.services', [])
     var json = { data: item };
     return $http.post('/lists', json)
     .then(function(resp) {
+      console.log(resp.data);
       return resp.data;
     });
   }

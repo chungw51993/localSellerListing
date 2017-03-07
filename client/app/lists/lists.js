@@ -14,3 +14,19 @@ angular.module('localList.lists', [])
   }
 
 })
+
+.filter('byprice', function() {
+  return function(input) {
+    console.log(input);
+    var output = [];
+
+    angular.forEach(input, function(list) {
+      var price = list.price.split('$')[1];
+      if (price < input) {
+        output.push(list);
+      }
+    });
+
+    return output;
+  }
+})

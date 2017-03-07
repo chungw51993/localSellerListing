@@ -3,11 +3,11 @@ var client = new craigslist.Client( {
   city: 'austin'
 });
 
+var resultArr = [];
 
 module.exports = {
 
   search: function(req, res, next) {
-    var resultArr = [];
     client.search(req.body.data)
       .then(function(listings) {
         res.send(listings);
@@ -15,8 +15,11 @@ module.exports = {
       .catch(function(error) {
         next(error);
       });
+  },
 
-
+  sendRes: function(req, res, next) {
+    console.log(resultArr);
+    res.send(resultArr);
   }
 
 }
