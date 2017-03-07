@@ -4,7 +4,7 @@ angular.module('localList.lists', [])
   $scope.list = {};
 
   $scope.search = function() {
-    Lists.search()
+    Lists.search($scope.list.item)
       .then(function (resp) {
         $scope.list = resp;
       })

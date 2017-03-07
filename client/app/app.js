@@ -1,8 +1,9 @@
 angular.module('localList', [
-  'localList.services'
-  'localList.list'
+  'localList.lists',
+  'localList.services',
+  'ngRoute'
 ])
-.config(function ($routeProvider, $httpProvider) {
+.config(function ($routeProvider) {
   $routeProvider
     .when('/lists', {
       templateUrl: 'app/lists/lists.html',
