@@ -6,7 +6,7 @@ require('./config/routes.js')(app, express);
 app.use(express.static(__dirname + '/../client'));
 
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log('Server is listening on port 8000!');
 });
 
