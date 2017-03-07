@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='localList'>
+<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Nunito" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
   <head>
     <meta charset="utf-8" />
     <title>Local Seller Listing</title>
@@ -7,18 +9,13 @@
   <body>
     <h1>Local Seller Listing</h1>
 
-    <nav class="navigation">
-    <ul>
-      <li><a href="#/city">Different City</a></li>
-    </ul>
-    </nav>
-
     <div ng-view></div>
 
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
-
+    <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="app/item/item.js"></script>
     <script src="app/lists/lists.js"></script>
     <script src="services/services.js"></script>
     <script src="app/app.js"></script>

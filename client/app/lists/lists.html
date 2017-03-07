@@ -1,19 +1,23 @@
 <div id='container'>
 <form name="searchForm" ng-submit="search()">
-  <input ng-model="list.item" placeholder="Enter item you want to search"/>
-  <button>Find</button>
-  <input ng-model="max" placeholder="Max amount"/>
+  <input type="text" ng-model="list.item" placeholder="Enter item you want to search"/>
+  <button class="find">Find</button>
 </form>
+<div class="city">City:  <input class="cityinput" type="text" ng-model="list.city" placeholder="Enter City"/></div>
 
-<h1>Lists</h1>
+<div class="max">Max Price:  <input class="maxinput" type="text" ng-model="list.max" placeholder="Enter Max Price"/></div>
+
+<h2>Seller List</h2>
 
 <div class="lists">
-  <div class="list" ng-repeat="item in list | byprice:max | orderBy:'date':true">
+  <div class="list" ng-repeat="item in list.data | byprice:list.max | orderBy:'date':true">
     <div class="info">
-      <a href="{{ item.url }}" >
+      <div class="item" ng-click="setItem(item, list.city)">
         <div class="title">{{ item.title }}</div>
-      </a>
-      <div class="date">{{ item.date }}</div>
+      </div>
+      <div class="date">Posted on:  {{ item.date }}</div>
     </div>
   </div>
 </div>
+
+<!-- href="{{ item.url }}" -->

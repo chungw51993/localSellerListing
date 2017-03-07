@@ -1,0 +1,19 @@
+<div id='container'>
+
+<button class="back" ng-click="goToList()">Back to Search</button>
+
+<h3>{{ data.data.title }}</h3>
+
+<img ng-src="{{ data.data.images[0] }}">
+
+
+<div class="info">
+  <div class="price">
+    {{ data.config.data.price }}
+  </div>
+  <div class="description">
+    {{ data.data.description }}
+  </div>
+</div>
+
+<a class="url" href="{{ data.data.url }}">Go to the URL</a>
