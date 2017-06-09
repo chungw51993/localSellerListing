@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html ng-app='localList'>
-<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Nunito" rel="stylesheet"/>
-<link rel="stylesheet" type="text/css" href="style.css"/>
   <head>
     <meta charset="utf-8" />
     <title>Local Seller Listing</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Nunito" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="assets/style/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://code.getmdl.io/1.3.0/material.deep_purple-yellow.min.css" />
   </head>
   <body>
-    <h1>Local Seller Listing</h1>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title title">Local Seller Listing</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content"><div ng-view></div></div>
+      </main>
+    </div>
 
-    <div ng-view></div>
-
-
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
-    <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="assets/lib/angular/angular.js"></script>
+    <script src="assets/lib/angular-route/angular-route.js"></script>
+    <script src="assets/lib/angular-local-storage/dist/angular-local-storage.js"></script>
     <script src="app/item/item.js"></script>
     <script src="app/lists/lists.js"></script>
-    <script src="services/services.js"></script>
+    <script src="app/services/services.js"></script>
     <script src="app/app.js"></script>
   </body>
 </html>

@@ -2,10 +2,13 @@ angular.module('localList.lists', [])
 
 .controller('ListsController', function($scope, $location, Lists) {
   $scope.list = {city: 'Austin'};
+  $scope.loading = false;
 
   $scope.search = function() {
+    $scope.loading = true;
     Lists.search($scope.list)
       .then(function (resp) {
+        $scope.loading = false;
         $scope.list.data = resp;
       })
       .catch(function(err) {
@@ -23,6 +26,19 @@ angular.module('localList.lists', [])
       });
   }
 
+  getList = function() {
+    $scope.loading = true;
+    Lists.getList($scope.list.city)
+      .then(function(resp) {
+        $scope.loading = false
+        $scope.list.data = resp;
+      })
+      .catch(function(err) {
+        console.error(err);
+      })
+  }
+
+  getList();
 })
 
 .filter('byprice', function() {

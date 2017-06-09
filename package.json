@@ -1,27 +1,28 @@
 {
-  "name": "hratx25-mvp",
+  "name": "localsellerlisting",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website where you can sell or purchase item from a local seller",
   "main": "index.js",
-  "scripts": {
-    "start": "node server/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chungw51993/hratx25-mvp.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/chungw51993/hratx25-mvp/issues"
-  },
-  "homepage": "https://github.com/chungw51993/hratx25-mvp#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "mongoose": "^4.8.6",
+    "morgan": "^1.8.2",
     "node-craigslist": "^1.1.0",
     "q": "^1.4.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chungw51993/localSellerListing.git"
+  },
+  "author": "Jin Chung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chungw51993/localSellerListing/issues"
+  },
+  "homepage": "https://github.com/chungw51993/localSellerListing#readme"
 }

@@ -11,7 +11,7 @@ angular.module('localList', [
       templateUrl: 'app/lists/lists.html',
       controller: 'ListsController'
     })
-    .when('/item', {
+    .when('/lists/:id', {
       templateUrl: 'app/item/item.html',
       controller: 'ItemController'
     })
