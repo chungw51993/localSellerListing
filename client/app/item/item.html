@@ -1,22 +1,21 @@
 <div class="container">
   <div class="back">
-    <button class="back mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    <button ng-click="goToList()" class="back mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
       <div>Back to List</div>
     </button>
   </div>
-
-  <h3 class="itemtitle">{{ data.data.title }}</h3>
-
-  <img class="itemimg" ng-src="{{ data.data.images[0] }}">
-
-  <div class="info">
-    <div class="price">
-      {{ data.config.data.price }}
+  <div class="itembody">
+    <h3 class="itemtitle">{{ data.data.title }}</h3>
+    <div class="posted">Posted At: {{ posted }}</div>
+    <img class="itemimg" ng-src="{{ data.data.images[0] }}">
+    <div class="info">
+      <div class="price">
+        {{ data.config.data.price }}
+      </div>
+      <div class="description">
+        {{ data.data.description }}
+      </div>
     </div>
-    <div class="description">
-      {{ data.data.description }}
-    </div>
+    <a class="url" href="{{ data.data.url }}">Go to the URL</a>
   </div>
-
-  <a class="url" href="{{ data.data.url }}">Go to the URL</a>
 </div>

@@ -16,7 +16,7 @@
         Loading List of Sellers...
       </div>
       <div class="lists">
-        <div class="list" ng-repeat="item in list.data | byprice:list.max | orderBy:'date':true">
+        <div class="list" ng-repeat="item in list.data | byprice:list.max | filter: item.hasPic | orderBy:'date':true">
           <div class="info">
             <div class="item" ng-click="setItem(item, list.city)">
               <div class="title"><img class="arrow" src="https://cdn.pixabay.com/photo/2016/02/23/15/44/arrow-1217938_960_720.png">{{ item.title }}</div>

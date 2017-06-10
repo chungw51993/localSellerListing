@@ -77,8 +77,9 @@ div.back {
 
 h3.itemtitle {
   font-family: 'Nunito', sans-serif;
+  margin-bottom: 10px;
 }
 
 img.itemimg {
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }

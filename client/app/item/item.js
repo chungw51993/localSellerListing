@@ -9,7 +9,7 @@ angular.module('localList.item', [])
 
   $scope.render = function() {
     $scope.data = localStorageService.get('data');
-    console.log($scope.data);
+    $scope.posted = $scope.data.data.postedAt.split('T').join(' ').split('.')[0];
   };
 
   $scope.goToList = function() {
