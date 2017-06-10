@@ -5,17 +5,18 @@
     </button>
   </div>
   <div class="itembody">
-    <h3 class="itemtitle">{{ data.data.title }}</h3>
+    <h3 class="itemtitle">{{ item.data.title }}</h3>
     <div class="posted">Posted At: {{ posted }}</div>
-    <img class="itemimg" ng-src="{{ data.data.images[0] }}">
+    <img class="itemimg" ng-src="{{ item.data.images[0] }}">
     <div class="info">
-      <div class="price">
-        {{ data.config.data.price }}
+      <div class="price" ng-if="item.config.data.item.price">
+        Price: {{ item.config.data.item.price }}
       </div>
       <div class="description">
-        {{ data.data.description }}
+        {{ item.data.description }}
       </div>
+      <iframe class="map" ng-if="item.data.mapUrl" ng-src="{{ location }}"></iframe>
     </div>
-    <a class="url" href="{{ data.data.url }}">Go to the URL</a>
+    <a class="url" href="{{ item.data.url }}">Go to the URL</a>
   </div>
 </div>

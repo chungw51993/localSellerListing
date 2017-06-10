@@ -4,8 +4,8 @@ var router = express.Router();
 
 router.get('/:city', (req, res, next) => {
   var client = new craigslist.Client({
-    city: req.params.city
-  })
+    city: req.params.city.replace(/\s+/g, '')
+  });
 
   client.list()
     .then((list) => {
@@ -14,12 +14,12 @@ router.get('/:city', (req, res, next) => {
     .catch((err) => {
       console.error(err);
       next();
-    })
-})
+    });
+});
 
 router.get('/:city/:item', (req, res, next) => {
   var client = new craigslist.Client({
-    city: req.params.city
+    city: req.params.city.replace(/\s+/g, '')
   });
   client.search(req.params.item)
     .then((list) => {
@@ -29,7 +29,7 @@ router.get('/:city/:item', (req, res, next) => {
       console.error(err);
       next();
     });
-})
+});
 
 
 module.exports = router;

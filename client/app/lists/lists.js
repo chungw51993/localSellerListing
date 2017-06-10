@@ -17,7 +17,6 @@ angular.module('localList.lists', [])
   };
 
   $scope.setItem = function(item, city) {
-    console.log(item);
     Lists.setItem(item, city)
       .then(function (resp) {
         $location.path('/lists/' + item.pid);

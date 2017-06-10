@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.post('/', (req, res, next) => {
   var client = new craigslist.Client({
-    city: req.body.city
+    city: req.body.city.replace(/\s+/g, '')
   });
   client.details(req.body.item)
     .then(function(list) {
@@ -14,6 +14,6 @@ router.post('/', (req, res, next) => {
       console.error(error);
       next();
     });
-})
+});
 
 module.exports = router;

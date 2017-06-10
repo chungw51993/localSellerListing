@@ -21,6 +21,7 @@
             <div class="item" ng-click="setItem(item, list.city)">
               <div class="title"><img class="arrow" src="https://cdn.pixabay.com/photo/2016/02/23/15/44/arrow-1217938_960_720.png">{{ item.title }}</div>
             </div>
+            <div class="price" ng-if="item.price">Price: {{ item.price }}</div>
             <div class="date">Posted on:  {{ item.date }}</div>
           </div>
         </div>
