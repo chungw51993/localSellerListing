@@ -5,7 +5,7 @@ angular.module('localList', [
   'LocalStorageModule',
   'ngRoute'
 ])
-.config(function ($routeProvider) {
+.config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/lists', {
       templateUrl: 'app/lists/lists.html',
@@ -18,4 +18,5 @@ angular.module('localList', [
     .otherwise({
       redirectTo: '/lists'
     });
+
 })

@@ -17,9 +17,10 @@ angular.module('localList.lists', [])
   }
 
   $scope.setItem = function(item, city) {
+    console.log(item);
     Lists.setItem(item, city)
       .then(function (resp) {
-        $location.path('/item');
+        $location.path('/lists/' + item.pid);
       })
       .catch(function(err) {
         console.error(err);
@@ -32,9 +33,6 @@ angular.module('localList.lists', [])
       .then(function(resp) {
         $scope.loading = false
         $scope.list.data = resp;
-      })
-      .catch(function(err) {
-        console.error(err);
       })
   }
 

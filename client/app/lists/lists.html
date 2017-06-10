@@ -7,24 +7,26 @@
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"">Find</button>
       </form>
     </div>
-  </div>
-
-  <h3 class="listTitle">List of Sellers</h3>
-  <hr>
-  <div class="max">Max Price:  <input class="maxinput" type="text" ng-model="list.max" placeholder="Enter Max Price"/></div>
-  <div class="loading" ng-if="loading">
-    <img class="loading" src="/assets/loading.gif">
-    Loading List of Sellers...
-  </div>
-  <div class="lists">
-    <div class="list" ng-repeat="item in list.data | byprice:list.max | orderBy:'date':true">
-      <div class="info">
-        <div class="item" ng-click="setItem(item, list.city)">
-          <div class="title">{{ item.title }}</div>
+    <div class="col-md-8">
+      <h3 class="listTitle">List of Sellers</h3>
+      <hr>
+      <div class="max">Max Price:  <input class="maxinput" type="text" ng-model="list.max" placeholder="Enter Max Price"/></div>
+      <div class="loading" ng-if="loading">
+        <img class="loading" src="/assets/loading.gif">
+        Loading List of Sellers...
+      </div>
+      <div class="lists">
+        <div class="list" ng-repeat="item in list.data | byprice:list.max | orderBy:'date':true">
+          <div class="info">
+            <div class="item" ng-click="setItem(item, list.city)">
+              <div class="title">{{ item.title }}</div>
+            </div>
+            <div class="date">Posted on:  {{ item.date }}</div>
+          </div>
         </div>
-        <div class="date">Posted on:  {{ item.date }}</div>
       </div>
     </div>
   </div>
+
 </div>
 <!-- href="{{ item.url }}" -->
