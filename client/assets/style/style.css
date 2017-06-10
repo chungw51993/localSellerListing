@@ -75,6 +75,10 @@ div.back {
   margin-top: 30px;
 }
 
+div.itempage {
+  margin-bottom: 100px;
+}
+
 h3.itemtitle {
   font-family: 'Nunito', sans-serif;
   margin-bottom: 10px;
@@ -84,6 +88,16 @@ img.itemimg {
   margin: 20px 0 20px 0;
 }
 
+div.info {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+div.description {
+  margin: 10px 0 30px 0;
+}
+
 a.url {
+  font-size: 17px;
   color: blue;
 }
