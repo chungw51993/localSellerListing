@@ -14,7 +14,7 @@ angular.module('localList.lists', [])
       .catch(function(err) {
         console.error(err);
       });
-  }
+  };
 
   $scope.setItem = function(item, city) {
     console.log(item);
@@ -25,23 +25,23 @@ angular.module('localList.lists', [])
       .catch(function(err) {
         console.error(err);
       });
-  }
+  };
 
   getList = function() {
     $scope.loading = true;
     Lists.getList($scope.list.city)
       .then(function(resp) {
-        $scope.loading = false
+        $scope.loading = false;
         $scope.list.data = resp;
-      })
-  }
+      });
+  };
 
   getList();
 })
 
 .filter('byprice', function() {
   return function(input, max) {
-    if(max > 0) {
+    if (max > 0) {
       var output = [];
 
       angular.forEach(input, function(list) {
@@ -56,5 +56,5 @@ angular.module('localList.lists', [])
     } else {
       return input;
     }
-  }
-})
+  };
+});

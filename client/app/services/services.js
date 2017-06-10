@@ -32,8 +32,8 @@ angular.module('localList.services', [])
         url: '/api/list/' + city
       })
       .then(function(resp) {
-        return resp.data
-      })
+        return resp.data;
+      });
     }
-  }
+  };
 });
