@@ -19,4 +19,5 @@ angular.module('localList', [
       redirectTo: '/lists'
     });
 
+  $locationProvider.html5Mode(true);
 });
