@@ -21,6 +21,6 @@ app.get('*', (req, res, next) => {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
-app.listen(process.env.PORT || 8000, () => {
-  console.log('Server is listening on port 8000!');
+app.listen(8001, () => {
+  console.log('Server is listening on port 8001!');
 });
